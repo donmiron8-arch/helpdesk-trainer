@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать!</title>
+    <link rel="stylesheet" href="simul.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    
+<body>
+    
+<main class="app-layout" id="screen-start">
+    <div class="hello-content">
+        <h1>Привет! Рад, что ты заглянул!</h1>
+        <h2>Ознакомься с информацией, и нажимай на кнопку ниже😉</h2>
+    </div>
+    <div class="cards-grid">
+    <article class="card-wrapper">
+        <div class="card-body">
+            <div class="card-front">Для чего этот симулятор?</div>
+        <div class="card-back">
+            <p>Это симулятор рабочей среды для начинающих специалистов текстовой поддержки/ голосовой техподдержки,</p>
+            <p> который позволяет воссоздать обращение клиента на линии, и отточить три основных шага для быстрого и качественного решения боли клиента.</p></div>
+        </div>
+    </article>
+
+    <article class="card-wrapper">
+        <div class="card-body">
+            <div class="card-front">Как это работает?</div>
+            <div class="card-back">Рубашка карточки</div>
+        </div>
+    </article>
+
+    <article class="card-wrapper">
+        <div class="card-body">
+            <div class="card-front">Твои инструменты</div>
+            <div class="card-back">В твоём распоряжении: тикет-панель (окно вопроса), встроенный таймер контроля SLA и прямой шлюз к Базе знаний- твоему Главному Кванту подсказок</div>
+        </div>
+    </article>
+
+    <article class="card-wrapper">
+        <div class="card-body">
+            <div class="card-front">В чём цель практики?</div>
+            <div class="card-back">Довести до автоматизма работу со Справкой, научиться выявлять боль клиента в тикетах и удерживать скорость обработки обращений в пределах норматива компании</div>
+        </div>
+    </article>
+    </div>
+<button class="btn-start" id="start">Авторизоваться</button>
+</main>
+
+
+<main class="authorization-layout" id="authorization">
+
+<div class="wrapper">
+    <form action="Login">
+        <div class="input-box">
+            <label for="user-name" class="visually-hidden" >Имя</label>
+            <input type="text" id="user-name" name="user_name" placeholder="Имя" required>
+        </div>
+
+        <div class="input-box">
+            <label for="last-name" class="visually-hidden">Фамилия</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Фамилия" required>
+        </div>
+
+        <div class="input-box">
+            <label for="job-title" class="visually-hidden" >Должность</label>
+            <input type="text" id="job-title" name="job_title" placeholder="Должность" required>
+        </div>
+
+        <div class="remember">
+            <input type="checkbox" id="remember-me" name="remember_me">
+            <label for="remember-me">Запомнить меня</label>
+        </div>
+
+        <button type="submit" class="btn-submit" id="btn-submit">Авторизоваться</button>
+    </form>
+</div>
+</main>
+
+
+<section class="simulator-layout hidden" id="screen-training">
+    <aside class="sidebar" id="sidebar">
+        <nav class="top-nav">
+            <h3>Helpdesk Trainer</h3>
+            <ul>
+            <li class="hub-item" id="hub-main"><a href="#">Главная</a></li>
+            <li class="hub-item" id="hub-difficulty">
+                <div class="difficulty-accordion">
+                    <summary class="hub-label" id="hub-label">Сложность</summary>
+                        <div class="accordion-level">
+                            <a href="#" class="difficulty-option" id="level-ease">🟢 Легко (выбор темы)</a>
+                            <a href="#" class="difficulty-option" id="level-hard">🔴 Сложно (рандом всех тем)</a>
+                        </div>
+                </div>
+            </li>
+            <li class="hub-item" id="hub-reset-difficulty"><a href="#">Сбросить сложность</a></li>
+            <li class="hub-item" id="hub-result"><a href="#">Посмотреть результаты</a></li>
+            <li class="hub-item" id="hub-reset-result"><a href="#">Сбросить результаты</a></li>
+            <li class="hub-item" id="hub-about"><a href="#">О симуляторе</a></li>
+            <li class="hub-item" id="hub-questions"><a href="#">Вопросы</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="text-content">
+        <h1>И так, приступим😉</h1>
+        <h2>Следуй инструкциям из карточки на главном экране и оттачивай навыки поиска информации. У тебя всё получится😎, желаю удачи!</h2>
+    </div>
+
+    <article class="ticket-panel">
+        <p>Вопрос от клиента:</p>
+        <div class="question-box" id="question-box"></div>
+        <div class="timer-box">
+            <span class="timer-label">Время на ответ:</span>
+            <div class="timer-display" id="timer">02:30</div>
+            <div class="timer-hint">Цель - стандарт: 2- 2:30 мин</div>
+        </div>
+
+    <div class="action-row">
+        <button class="btn-go" id="go">Начать</button>
+        <a href="#" class="kb-link" target="_blank">📚? База знаний здесь.</a>
+        </div>
+
+<input type="text" id="answer-input" class="answer-input" placeholder="Сформулируй ответ здесь:">
+    </article>
+
+    <button class="btn-finish" id="finish">Отправить</button>
+</section>
+<script src="simul.js"></script>
+</body>
+
+</html>
