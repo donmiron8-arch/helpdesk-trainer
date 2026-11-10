@@ -1,31 +1,43 @@
-    Helpdesk Trainer
+   # Helpdesk Trainer
+Interactive training simulator for customer support specialists.
 
-Interactive training simulator for helpdesk specialists.
+The project is based on real work and internship experience in customer support.
 
-The project was inspired by real onboarding and support training experience.
+The main reason for creating this project was the difficulty of adapting new employees to the company's knowledge base.
 
-Features
 
-   random questions
-   training mode
-   difficulty levels
-   responsive interface
+   ## During the internship, the following problems were identified:
 
-Technologies
+- lack of a clear knowledge base structure;
+- incorrect search functionality;
+- partially broken links and macros;
+- too much time spent searching for information.
+- The project is designed to help support specialists adapt faster and reinforce core customer support workflows.
 
-   HTML
-   CSS
-   JavaScript
+   ## Features
 
-Planned Features
+training mode with random questions;
+responsive interface.
 
-   question categories
-   timer
-   training statistics
-   progress saving
-   Node.js backend
-   user authentication
+   ## Technologies
+HTML;
+CSS;
+JavaScript.
 
-Author
+   ## Planned Features
 
+- question categories;
+- difficulty levels:
+    Easy: random questions from a selected topic;
+    Hard: random questions from all topics;
+- response time training timer;
+- learning statistics;
+- progress saving;
+- Node.js backend;
+- user authentication using trainee information.
+- Project Status
+
+   ## The project is currently under active development.
+
+   ## Author
    Miron Yurin
