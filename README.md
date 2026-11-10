@@ -34,8 +34,9 @@ JavaScript.
 - learning statistics;
 - progress saving;
 - Node.js backend;
-- user authentication using trainee information.
-- Project Status
+- user authentication using trainee information;
+- Project Status;
+- Implementing Screen Switching Logic.
 
    ## The project is currently under active development.
 
