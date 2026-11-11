@@ -550,6 +550,60 @@ p {
     pointer-events: none;
 }
 
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #2d2d44;
+    }
+
+    .simulator-layout {
+        padding: 15px;
+    }
+
+    .question-box,
+    .answer-input,
+    .text-content {
+        max-width: 100%;
+    }
+
+    .timer-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .timer-display {
+        width: 140px;
+        height: 140px;
+        font-size: 1.5rem;
+    }
+
+    .action-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-go,
+    .btn-finish,
+    .btn-main,
+    .btn-start {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .wrapper {
+        width: calc(100% - 30px);
+        max-width: 420px;
+        padding: 20px;
+    }
+
+    .card-wrapper {
+        width: min(280px, 100%);
+    }
+}
 
 
 
