@@ -10,7 +10,7 @@
     
 <body>
     
-<main class="app-layout" id="screen-start">
+<main class="app-layout" id="screen-start" data-screen="start">
     <div class="hello-content">
         <h1>Привет! Рад, что ты заглянул!</h1>
         <h2>Ознакомься с информацией, и нажимай на кнопку ниже😉</h2>
@@ -46,11 +46,11 @@
         </div>
     </article>
     </div>
-<button class="btn-start" id="start">Авторизоваться</button>
+<button type="button" class="btn-start" id="start" data-target="auth">Далее</button>
 </main>
 
 
-<main class="authorization-layout" id="authorization">
+<main class="authorization-layout hidden" id="screen-auth" data-screen="auth">
 
 <div class="wrapper">
     <form action="Login">
@@ -74,7 +74,7 @@
             <label for="remember-me">Запомнить меня</label>
         </div>
 
-        <button type="submit" class="btn-submit" id="btn-submit">Авторизоваться</button>
+        <button type="submit" class="btn-submit" id="btn-submit" data-target="training">Авторизоваться</button>
     </form>
 </div>
 </main>
@@ -90,7 +90,7 @@
                 <div class="difficulty-accordion">
                     <summary class="hub-label" id="hub-label">Сложность</summary>
                         <div class="accordion-level">
-                            <a href="#" class="difficulty-option" id="level-easygit status">🟢 Легко (выбор темы)</a>
+                            <a href="#" class="difficulty-option" id="level-easy">🟢 Легко (выбор темы)</a>
                             <div class="accordion-level" id="easy-topics">
                                 <a href="#" class="difficulty-option">Личный кабинет</a>
                                 <a href="#" class="difficulty-option">Карты и счета</a>      
