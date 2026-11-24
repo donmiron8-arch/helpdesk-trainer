@@ -99,28 +99,26 @@ const questions = [
   },
 ];
 
+const sidebar = document.getElementById('sidebar');
+const navMain = document.getElementById('main');
 
-const sidebar = document.getElementById("sidebar");
-const navMain = document.getElementById("main");
-
-const lavelEase = document.getElementById("level-easy");
-const lavelHard = document.getElementById("level-hard");
-const resetDif = document.getElementById("hub-reset-difficulty");
-const resetResult = document.getElementById("hub-reset-result");
+const lavelEase = document.getElementById('level-easy');
+const lavelHard = document.getElementById('level-hard');
+const resetDif = document.getElementById('hub-reset-difficulty');
+const resetResult = document.getElementById('hub-reset-result');
 const about = document.getElementById("hub-about");
-const hubQuestions = document.getElementById("hub-questions");
+const hubQuestions = document.getElementById('hub-questions');
 
-const mainItem = document.getElementById("hub-main");
-const buttonFinish = document.getElementById("finish");
+const mainItem = document.getElementById('hub-main');
+const buttonFinish = document.getElementById('finish');
 
-const questionBox = document.getElementById("question-box");
-const timerDisplay = document.getElementById("timer");
-const inputText = document.getElementById("answer-input");
+const questionBox = document.getElementById('question-box');
+const timerDisplay = document.getElementById('timer');
+const inputText = document.getElementById('answer-input');
 
 const screens = document.querySelectorAll('[data-screen]');              
 const btnNav = document.querySelectorAll('[data-target]');
 const theme = document.querySelectorAll('.difficulty-option');
-
 const filtered = (arr, queryTheme) => {                              
   return arr.filter(item => item.category.includes(queryTheme));
 }
@@ -138,7 +136,7 @@ theme.forEach((item) => {
     item.addEventListener('click', (handleThemeClick));
   }); 
 
-  const showScreen = (screenName) => {                    /*<-- Добавить в коммит логику экранов отсюда*/
+  const showScreen = (screenName) => {                    
   screens.forEach((screen) => {
   if(screen.dataset.screen === screenName) {
     screen.classList.remove('hidden');
@@ -177,34 +175,35 @@ const randomQuestion = (count) => {
   return result;
 };
 
-const buttonGo = document.getElementById("go");
+const buttonGo = document.getElementById('go');
 
-buttonGo.addEventListener("click", () => {
+buttonGo.addEventListener('click', () => {
   let randText = randomQuestion(1)[0];
   if (!randText) return;
-  questionBox.classList.add("fade-out");
+  questionBox.classList.add('fade-out');
 
   setTimeout(() => {
     questionBox.textContent = randText.text;
 
-    questionBox.classList.remove("fade-out");
+    questionBox.classList.remove('fade-out');
   }, 200);
 });
 
-const cards = document.querySelectorAll(".card-body");
+const cards = document.querySelectorAll('.card-body');
 
 cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    card.classList.toggle("is-flipped");
+  card.addEventListener('click', () => {
+    card.classList.toggle('is-flipped');
   });
 });
 
-const container = document.getElementById("hub-difficulty");
+const container = document.getElementById('hub-difficulty');
 
-document.addEventListener("DOMContentLoaded", () => {
-  container.addEventListener("click", (e) => {
-    if (e.target.classList.contains("hub-label")) {
-      e.target.classList.toggle("active");
+document.addEventListener('DOMContentLoaded', () => {
+  container.addEventListener('click', (e) => {
+    if (e.target.classList.contains('hub-label') || e.target.id === 'level-easy') {
+      e.preventDefault();
+      e.target.classList.toggle('active');
     }
   });
 });
