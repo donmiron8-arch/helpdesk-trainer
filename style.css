@@ -206,13 +206,10 @@ body {
 }
 
 
-
-
 .simulator-layout {
     display: flex;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     flex-direction: column;
     align-items: center;
@@ -326,7 +323,7 @@ body {
 }
 
 .hub-label.active ~ .accordion-level {
-    max-height: 4.5lh;
+    max-height: 18lh;
     color: currentColor;
 }
 
@@ -550,7 +547,7 @@ p {
 }
 
 .hidden {
-    
+    display: none;
     opacity: 0;
     pointer-events: none;
 }
@@ -620,7 +617,6 @@ p {
         width: min(280px, 100%);
     }
 }
-
 
 
 
