@@ -336,6 +336,11 @@ body {
     transition: hidden 0.3s ease;
 }
 
+#level-easy.active ~ #easy-topics {        
+    max-height: 18lh;
+    color: currentColor;
+}
+
 .btn-main {
     display: flex;
     justify-content: start;
@@ -411,10 +416,10 @@ p {
 
 .timer-label {
     font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.65);      /* чуть светлее, чем основной текст, но не белый */
-  text-transform: uppercase;            /* капс — это сразу даёт ощущение UI-подписи */
-  letter-spacing: 1px;                  /* буквы чуть разнесены — выглядит собраннее */
-  font-weight: 500;                     /* не жирный, но и не тонкий */
+  color: rgba(255, 255, 255, 0.65);      
+  text-transform: uppercase;            
+  letter-spacing: 1px;                  
+  font-weight: 500;                     
   line-height: 1.2;
 }
 
@@ -548,6 +553,17 @@ p {
     
     opacity: 0;
     pointer-events: none;
+}
+
+[data-screen] {
+  opacity: 1;                    
+  transition: opacity 0.4s ease;
+}
+
+@starting-style {               
+  [data-screen] {
+    opacity: 0;
+  }
 }
 
 @media (max-width: 768px) {
