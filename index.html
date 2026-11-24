@@ -80,17 +80,23 @@
 </main>
 
 
-<section class="simulator-layout hidden" id="screen-training">
+<section class="simulator-layout hidden" id="screen-training" data-screen="training">
     <aside class="sidebar" id="sidebar">
         <nav class="top-nav">
             <h3>Helpdesk Trainer</h3>
             <ul>
-            <li class="hub-item" id="hub-main"><a href="#">Главная</a></li>
+            <li class="hub-item" id="hub-main"><a href="#" id="main" data-target="start">Главная</a></li>
             <li class="hub-item" id="hub-difficulty">
                 <div class="difficulty-accordion">
                     <summary class="hub-label" id="hub-label">Сложность</summary>
                         <div class="accordion-level">
-                            <a href="#" class="difficulty-option" id="level-ease">🟢 Легко (выбор темы)</a>
+                            <a href="#" class="difficulty-option" id="level-easygit status">🟢 Легко (выбор темы)</a>
+                            <div class="accordion-level" id="easy-topics">
+                                <a href="#" class="difficulty-option">Личный кабинет</a>
+                                <a href="#" class="difficulty-option">Карты и счета</a>      
+                                <a href="#" class="difficulty-option">Безопасность</a>
+                                <a href="#" class="difficulty-option">Продукты и обслуживание</a>
+                            </div>
                             <a href="#" class="difficulty-option" id="level-hard">🔴 Сложно (рандом всех тем)</a>
                         </div>
                 </div>
